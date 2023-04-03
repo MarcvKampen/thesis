@@ -5,10 +5,13 @@ Welcome to the repository of Marc van Kampen regarding his master thesis.
 In this repository, you will find all the code used to reanalyze a spectral dataset using an optimized open modification search (OMS) engine: ANN-SoLo. Utilizing this OMS resulted in acquired post-translational modifications grouped in co-expressed modules and by disease stage.
 
 ## Resources
+
 ANN-SoLo: https://github.com/bittremieux/ANN-SoLo
+
 Higgintbotham et al:
   The paper: https://pubmed.ncbi.nlm.nih.gov/31461916/
   The spectral dataset: https://www.ebi.ac.uk/pride/archive/projects/PXD014376
+  
 OpenMS: https://openms.de/install/
 Protein Inference Algorithm (PIA): https://github.com/mpc-bioinformatics/pia
 
