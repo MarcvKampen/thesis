@@ -2,7 +2,7 @@
 Welcome to the repository of Marc van Kampen regarding his master thesis.
 
 ## About
-In this repository, you will find all the code used to reanalyze a spectral dataset using an optimized open modification search (OMS) engine: ANN-SoLo. Utilizing this OMS resulted in acquired post-translational modifications grouped in co-expressed modules and by disease stage.
+In this repository, you will find all the code used to reanalyze an Alzheimers spectral dataset using an optimized open modification search (OMS) engine: ANN-SoLo. Utilizing this OMS resulted in acquired post-translational modifications grouped in co-expressed modules and by disease stage.
 
 ## Resources
 
