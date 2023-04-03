@@ -3,6 +3,7 @@
 ## Introduction
 In this guide, we present a step-by-step workflow for MS-based protein inference and identification analysis. The workflow involves the conversion of mztab files to idXML files, using openMS to refresh target/decoy information, and conducting statistical analyses using PIA (Protein Interference Algorithms).
 
+## Workflow
 Step 1: Convert mztab files to idXML files
 The first step is to convert mztab files to idXML files. To do this, use the following script:
 /thesis/protein_interference/mztab_to_idXML.py
