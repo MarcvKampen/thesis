@@ -9,11 +9,13 @@ In this repository, you will find all the code used to reanalyze an Alzheimers s
 ANN-SoLo: https://github.com/bittremieux/ANN-SoLo
 
 Higgintbotham et al:
+
   The paper: https://pubmed.ncbi.nlm.nih.gov/31461916/
   
   The spectral dataset: https://www.ebi.ac.uk/pride/archive/projects/PXD014376
   
 OpenMS: https://openms.de/install/
+
 Protein Inference Algorithm (PIA): https://github.com/mpc-bioinformatics/pia
 
 ## Workflow
