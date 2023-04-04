@@ -11,12 +11,13 @@ The first step is to convert mztab files to idXML files. To do this, use the fol
 Step 2: Use PeptideIndexer from openMS
 PeptideIndexer is a tool from openMS that refreshes target/decoy information and mapping of peptides to proteins. It allows for ambiguous amino acids (B|J|Z|X) in the protein database and peptide sequence. The target/decoy information is crucial for the TOPP_FalseDiscoveryRate tool. For FDR calculations, peptides hitting both target and decoy proteins are counted as target hits.
 
-To use PeptideIndexer, provide the refseq protein .fasta file from NIH. This is an command example:
+To use PeptideIndexer, provide the refseq protein .fasta file from NIH. 
+Example:
 PeptideIndexer -in output_step1/UWA_output1.idXML -fasta fasta1.fasta -out output_step2/UWA_output2.idXML -missing_decoy_action 'error' -IL_equivalent -enzyme:specificity 'none'
 
 Step 3: Use PIA to convert idXML files to xml files
 PIA (Protein Interference Algorithms) is a toolbox for MS-based protein inference and identification analysis. It allows you to inspect the results of common proteomics spectrum identification search engines, combine them seamlessly, and conduct statistical analyses. PIA focuses on the integrated inference algorithms, i.e., concluding the proteins from a set of identified spectra.
-the following is an example command:
+Example:
 java -jar pia-1.4.7.jar -c -n=test1 -o=output_step3/UWA_output3.xml output_step2/UWA_output2.idXML
 
 Step 4: Use PIA to identify the proteins from the peptide sequence
