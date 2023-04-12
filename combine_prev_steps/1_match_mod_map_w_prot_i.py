@@ -1,11 +1,11 @@
 import argparse
 import csv
 
-# Input
+# Set up argparse to take input file paths as arguments
 parser = argparse.ArgumentParser()
-parser.add_argument('file1', type=str, help='Path to .csv file from modification mapping')
-parser.add_argument('file2', type=str, help='Path to second .csv file from protein interference')
-parser.add_argument('output', type=str, help='Path to output .csv file')
+parser.add_argument('file1', type=str, help='Path to first input CSV file')
+parser.add_argument('file2', type=str, help='Path to second input CSV file')
+parser.add_argument('output', type=str, help='Path to output CSV file')
 args = parser.parse_args()
 
 # Open the input files
@@ -14,8 +14,9 @@ with open(args.file1, 'r') as file1, open(args.file2, 'r') as file2:
     reader1 = csv.DictReader(file1)
     reader2 = csv.DictReader(file2)
     
-    # Create a list to store the matched rows
+    # Create a list and a set to store the matched rows and their hashes
     matched_rows = []
+    matched_hashes = set()
     
     # Iterate through the rows of file1
     for row1 in reader1:
@@ -25,7 +26,10 @@ with open(args.file1, 'r') as file1, open(args.file2, 'r') as file2:
             if row1['sequence'] == row2['peptide_sequence']:
                 # If there is a match, merge the entire row from both files and append to matched_rows list
                 matched_row = {**row1, **row2}
-                matched_rows.append(matched_row)
+                matched_row_hash = hash(frozenset(matched_row.items()))
+                if matched_row_hash not in matched_hashes:
+                    matched_hashes.add(matched_row_hash)
+                    matched_rows.append(matched_row)
                 
         # Reset the reader2 to the beginning of the file for each row in reader1
         file2.seek(0)
