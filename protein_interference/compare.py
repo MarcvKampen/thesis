@@ -57,5 +57,3 @@ if not combined_df.empty:
     print("Output file saved successfully!")
 else:
     print("No matches found. Output file not saved.")
-
-# python compare.py ditisdeoutput.csv test1b.csv klaar.csv
